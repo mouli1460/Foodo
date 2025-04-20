@@ -1,0 +1,113 @@
+:root {
+    --primary-color: rgb(82, 177, 82);
+    --primary-color-dark: rgb(66, 140, 66);
+    --secondary-color: rgb(74, 145, 68);
+    --text-color: #444;
+    --background-color: rgba(255, 255, 255, 0.1);
+    --border-color: rgba(0, 0, 0, 0.2);
+    --title-color: black;
+    --border-radius: 12px;
+    --box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+}
+
+.login-popup {
+    display: grid;
+    width: 70%;
+    margin-left: max(5vw, 25px);
+    margin-top: 50px;
+}
+
+.login-popup-container {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    padding: 25px 30px;
+    border: 1px solid var(--secondary-color);
+    border-radius: var(--border-radius);
+    background-color: var(--background-color);
+    backdrop-filter: blur(12px);
+    box-shadow: var(--box-shadow);
+    color: var(--text-color);
+    width: max(23vw, 330px);
+    font-size: 14px;
+    animation: fadeIn 0.5s ease-in-out;
+    place-self: start center;
+    transition: transform 0.3s ease, background-color 0.3s;
+}
+
+.login-popup-container:hover {
+    transform: translateY(-4px);
+}
+
+.login-popup-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--title-color);
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.login-popup-inputs {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.login-popup-inputs input {
+    outline: none;
+    border: 1px solid var(--border-color);
+    padding: 10px 12px;
+    border-radius: 6px;
+    background-color: rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(4px);
+    transition: all 0.3s ease;
+}
+
+.login-popup-inputs input:focus {
+    border-color: var(--primary-color);
+    background-color: rgba(255, 255, 255, 0.9);
+}
+
+.login-popup-container button {
+    border: none;
+    padding: 12px;
+    border-radius: 6px;
+    background-color: var(--primary-color);
+    color: white;
+    font-size: 15px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.login-popup-container button:hover {
+    background-color: var(--primary-color-dark);
+    transform: scale(1.03);
+}
+
+@media (max-width: 650px) {
+    .login-popup {
+        height: 100%;
+        margin: 50px auto;
+    }
+
+    .login-popup-container {
+        width: 90%;
+        padding: 25px 15px;
+    }
+
+    .login-popup-title {
+        justify-content: center;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

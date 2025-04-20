@@ -1,0 +1,82 @@
+.order-item {
+    display: grid;
+    grid-template-columns: 0.6fr 2fr 1fr 1fr 1fr;
+    align-items: start;
+    gap: 24px;
+    border: 1px solid #6fad68;
+    background-color: #f5fbf3;
+    padding: 24px;
+    margin: 32px 0;
+    font-size: 15px;
+    color: #444;
+    border-radius: 12px;
+    box-shadow: 0 2px 6px rgba(51, 122, 54, 0.1);
+    transition: box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+.order-item-time {
+    font-size: 0.85rem;
+    color: #d88e00;
+    margin-top: 5px;
+    font-weight: bold;
+  }
+  
+.order-item:hover {
+    box-shadow: 0 4px 10px rgba(51, 122, 54, 0.15);
+    transform: translateY(-2px);
+}
+
+.order-item-food,
+.order-item-name {
+    font-weight: 600;
+}
+
+.order-item-name {
+    margin-top: 24px;
+    margin-bottom: 6px;
+    font-size: 16px;
+}
+
+.order-item-address {
+    margin-bottom: 12px;
+    line-height: 1.5;
+}
+
+.order-item select {
+    background-color: #94d88b;
+    border: 1px solid #3c804b;
+    border-radius: 6px;
+    padding: 10px 12px;
+    font-size: 14px;
+    color: #2e2e2e;
+    width: max(12vw, 130px);
+    cursor: pointer;
+    transition: background-color 0.2s ease, border 0.2s ease;
+}
+
+.order-item select:hover {
+    background-color: #83c67a;
+}
+
+@media (max-width: 1000px) {
+    .order-item {
+        grid-template-columns: 0.6fr 2fr 1fr;
+        padding: 18px 12px;
+        gap: 16px;
+        font-size: 13px;
+    }
+
+    .order-item select {
+        padding: 6px 10px;
+        font-size: 12px;
+    }
+
+    .order-item img {
+        width: 45px;
+        border-radius: 6px;
+    }
+
+    .order-item-name {
+        font-size: 14px;
+    }
+}

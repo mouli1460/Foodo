@@ -1,0 +1,59 @@
+.header {
+    height: 34vw;
+    width: 100%; /* Adjust the width to control the left and right space */
+    margin: 30px auto;
+    margin-top: 15px;
+    background: url('E:\Downloads\Food-Delivery-main\Food-Delivery-main\frontend\src\assets\frontend_assets\ChatGPT Image Apr 13, 2025, 07_11_13 PM.png') no-repeat;
+    background-size: cover;
+    background-position: center; /* Keeps the image centered */
+    position: relative;
+    border-radius: 20px; /* Adjust the radius as needed */
+}
+
+
+
+.header-contents{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 1.5vw;
+    max-width: 50%;
+    bottom: 10%;
+    left: 6vw;
+    animation: fadeIn 3s;
+}
+.header-contents h2{
+    font-weight: 500;
+    color: white;
+    font-size: max(4.5vw,22px);
+}
+.header-contents p{
+    color: white;
+    font-size: 1vw;
+}
+.header-contents button{
+    border: none;
+    color: #747474;
+    font-weight: 500;
+    padding: 1vw 2.3vw;
+    background-color: white;
+    font-size: max(1vw,13px);
+    border-radius: 50px;
+}
+@media (max-width:1050px) {
+    .header-contents{
+        max-width: 45%;
+    }
+}
+@media (max-width:750px) {
+    .header-contents{
+        max-width: 65%;
+    }
+    .header-contents p{
+        display: none;
+    }
+    .header-contents button{
+        padding: 2vw 4vw;
+    }
+}

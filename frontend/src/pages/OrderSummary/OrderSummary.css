@@ -1,0 +1,62 @@
+.order-summary {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 24px;
+    border: 1px solid #ddd;
+    border-radius: 16px;
+    background-color: #fff;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.05);
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  }
+  
+  .order-summary h2 {
+    font-size: 28px;
+    margin-bottom: 24px;
+    color: #333;
+    text-align: center;
+  }
+  
+  .summary-section {
+    margin-bottom: 32px;
+  }
+  
+  .summary-section h3 {
+    font-size: 20px;
+    color: #444;
+    margin-bottom: 12px;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 4px;
+  }
+  
+  .summary-section p {
+    margin: 6px 0;
+    font-size: 16px;
+    color: #555;
+  }
+  
+  .item-row {
+    display: flex;
+    justify-content: space-between;
+    margin: 8px 0;
+    padding: 6px 0;
+    border-bottom: 1px dashed #eee;
+  }
+  
+  @media (max-width: 600px) {
+    .order-summary {
+      padding: 16px;
+    }
+  
+    .order-summary h2 {
+      font-size: 22px;
+    }
+  
+    .summary-section h3 {
+      font-size: 18px;
+    }
+  
+    .summary-section p, .item-row p {
+      font-size: 14px;
+    }
+  }
+  
